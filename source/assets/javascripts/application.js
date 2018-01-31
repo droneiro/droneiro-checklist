@@ -7,3 +7,8 @@ if ('addEventListener' in document) {
 		FastClick.attach(document.body);
 	}, false);
 }
+
+setTimeout(function(){
+  document.body.classList.add('select-checklist')
+},100)
+

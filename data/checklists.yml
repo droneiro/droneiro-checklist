@@ -1,0 +1,20 @@
+- title: Vou voar amanhã
+  description: Se prepare com antecedência para um vôo.
+  items:
+    - title: Teste
+      paragraph: Teste
+- title: Estou indo pro local de vôo
+  description: Não deixe nada para trás.
+  items:
+    - title: Teste
+      paragraph: Teste
+- title: Vou voar agora!
+  description: Lembrando de todos os detalhes antes de decolar.
+  items:
+    - title: Teste
+      paragraph: Teste
+- title: Acabei de pousar
+  description: Recolha seu equipamento com segurança e organização.
+  items:
+    - title: Teste
+      paragraph: Teste

@@ -1,0 +1,14 @@
+/// @group settings
+/// @name mixins
+
+=material-shadow($level: 1)
+  @if $level == 1
+    box-shadow: 0 1px 3px rgba(black, .12)
+  @if $level == 2
+    box-shadow: 0 3px 6px rgba(black, .16)
+  @if $level == 3
+    box-shadow: 0 10px 20px rgba(black, .19)
+  @if $level == 4
+    box-shadow: 0 14px 28px rgba(black, .25)
+  @if $level == 5
+    box-shadow: 0 19px 38px rgba(black, .30)
