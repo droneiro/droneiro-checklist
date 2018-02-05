@@ -2,29 +2,44 @@
 /// @name checklist
 
 .checklist
-  +material-shadow(4)
-  opacity: 0
-  visibility: hidden
-  transform: translateY(2em)
-  transition: .6s
+  +material-shadow(3)
+  transition: .2s
 
-  & + &
-    margin-top: 1.6em
+  & + &, .checklist__group + &
+    margin-top: 2em
 
-    +bp(md)
-      margin-top: 3em
+  &--main
+    +material-shadow(4)
+    opacity: 0
+    visibility: hidden
+    transform: translateY(8em)
+    transition: .4s cubic-bezier(.38,1.62,.61,1)
 
-  body.select-checklist &
-    opacity: 1
-    visibility: visible
+    & + &
+      margin-top: 1.6em
+
+      +bp(md)
+        margin-top: 3em
+
+    body.checklist-select &
+      opacity: 1
+      visibility: visible
+      transform: translateY(0em)
+
+    @for $i from 1 through 12
+      &:nth-child(#{$i})
+        transition-delay: .1s * $i
+
+  &.selected
     transform: translateY(0em)
+    transition-delay: 2s !important
 
-  @for $i from 1 through 12
-    &:nth-child(#{$i})
-      transition-delay: .1s * $i
+  &.checked
+    opacity: .3
+    filter: grayscale(100%)
 
 .checklist__content
-  padding: 1.4em
+  padding: 1em
   display: flex
   background-color: white
   border: 1px solid rgba(black, .1)
@@ -39,15 +54,26 @@
   &:active
     transform: scale(0.98)
 
+  .checklist.selected &, .checklist.active &
+    +material-shadow(4)
+    transform: scale(1.05) !important
+
+  .checklist--main &
+    padding: 1.4em
+
   > *
     align-self: center
 
 .checklist__icon
-  width: 4em
-  height: 4em
+  width: 3em
+  height: 3em
   background-color: $color-magenta
   border-radius: 50%
   flex-shrink: 0
+
+  .checklist--main &
+    width: 4em
+    height: 4em
 
 .checklist__info
   flex-grow: 1
@@ -63,3 +89,29 @@
   margin-top: .3em
   font-weight: 200
   line-height: 1.4
+
+.checklist__group
+  margin-left: 1em
+  padding: 2em 0 0 2em
+  border-left: 4px solid rgba(white, .2)
+
+.checklist__options
+  transition: .5s
+  opacity: 1
+
+  body.checklist-selected &
+    transform: translateY(-100%)
+    opacity: 0
+    transition-delay: 1.5s
+
+  body[current-checklist] &
+    display: none
+
+.checklist__container
+  display: none
+
+  $checklists: 'vou-voar-amanha', 'estou-indo-pro-local-de-voo', 'vou-voar-agora', 'acabei-de-pousar'
+
+  @each $checklist in $checklists
+    body[current-checklist=#{$checklist}] &.#{$checklist}
+      display: block

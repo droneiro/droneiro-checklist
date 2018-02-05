@@ -1,20 +1,35 @@
 - title: Vou voar amanhã
+  subtitle: Vou voar amanhã
   description: Se prepare com antecedência para um vôo.
   items:
-    - title: Teste
-      paragraph: Teste
+    - title: Condições de vôo
+      paragraph: Confira as condições climáticas do local no horário em que o vôo irá acontecer.
+    - title: App Atualizado
+      paragraph: Verifique o app que você irá usar para controlar o drone está devidamente atualizado. Se for o caso, atualize.
+    - title: Firmware do drone atualizado
+      paragraph: Pareie o drone com seu celular e confira se o app irá pedir alguma atualização de firmware. Se for o caso, atualize.
+    - title: Carregar baterias
+      items:
+        - title: Baterias do drone
+        - title: Rádio-controle
+        - title: Smartphone
+    - title: Formatar Cartão SD
+    - title: Obter permissões de vôo necessárias
 - title: Estou indo pro local de vôo
+  subtitle: Indo pro local de vôo
   description: Não deixe nada para trás.
   items:
-    - title: Teste
-      paragraph: Teste
+    - title: Teste 2
+      paragraph: Teste 2
 - title: Vou voar agora!
+  subtitle: Vou voar agora!
   description: Lembrando de todos os detalhes antes de decolar.
   items:
-    - title: Teste
-      paragraph: Teste
+    - title: Teste 3
+      paragraph: Teste 3
 - title: Acabei de pousar
+  subtitle: Acabei de pousar
   description: Recolha seu equipamento com segurança e organização.
   items:
-    - title: Teste
-      paragraph: Teste
+    - title: Teste 4
+      paragraph: Teste 4

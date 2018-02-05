@@ -1,15 +1,49 @@
-.section
+.header
+  = link_to '/', class: 'header__logo' do
+    = image_tag 'droneiro-com.svg'
 
-
 .section
+.spacer
+
+.section.checklist__options
   .container
-    .text-align-center Escolha um checklist para começar!
+    .title.text-align-center.js-main-instruction Escolha um checklist para começar!
     .spacer
-    .checklist__container
       - data.checklists.each do |checklist|
-        .checklist
+        .checklist.checklist--main.js-checklist-option data-checklist=checklist.title.parameterize
           .checklist__content
             .checklist__icon
             .checklist__info
               .checklist__title = checklist.title
               .checklist__paragraph = checklist.description
+            .loader
+
+- data.checklists.each do |checklist|
+  .section.section--checklist.checklist__container class=checklist.title.parameterize
+    .container
+      .title.text-align-center = checklist.subtitle
+      .spacer
+        - checklist.items.each do |item|
+          .checklist.js-toggle-check class=(item.items ? 'js-group-master' : '') data-group=item.title.parameterize
+            .checklist__content
+              .checklist__icon
+              .checklist__info
+                .checklist__title = item.title
+                - if item.paragraph
+                  .checklist__paragraph = item.paragraph
+
+          - if item.items
+            .checklist__group
+              - item.items.each do |subitem|
+                .checklist.checklist--small.js-toggle-check.js-group data-group=item.title.parameterize
+                  .checklist__content
+                    .checklist__icon
+                    .checklist__info
+                      .checklist__title = subitem.title
+                      - if subitem.paragraph
+                        .checklist__paragraph = subitem.paragraph
+
+.progress
+  .progress__bar
+    span.js-status-percentage
+  .progress__status.js-status-text 0%

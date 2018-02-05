@@ -1,0 +1,42 @@
+/// @group components
+/// @name progress
+
+.progress
+  background-color: white
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 1em
+  color: rgba(black, .7)
+  display: flex
+  flex-wrap: nowrap
+  transition: .2s
+  transform: translateY(100%)
+
+  body[current-checklist] &
+    transform: translateY(0%)
+
+  > *
+    align-self: center
+
+.progress__bar
+  background-color: rgba(black, .1)
+  position: relative
+  height: .8em
+  border-radius: 3em
+  flex-grow: 1
+
+  span
+    height: 100%
+    width: 0%
+    max-width: 100%
+    background-color: $color-green
+    position: absolute
+    border-radius: inherit
+    transition: .2s
+
+.progress__status
+  font-size: .8em
+  flex-shrink: 0
+  margin-left: 1em
