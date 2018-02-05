@@ -15,14 +15,17 @@
             .checklist__icon
             .checklist__info
               .checklist__title = checklist.title
-              .checklist__paragraph = checklist.description
+              .checklist__paragraph
+                = checklist.description
+                span.checklist__detail = ' － '+checklist.items.length.to_s+' itens'
             .loader
 
 - data.checklists.each do |checklist|
   .section.section--checklist.checklist__container class=checklist.title.parameterize
     .container
-      .title.text-align-center = checklist.subtitle
-      .spacer
+      .title.text-align-center = checklist.title
+      .title.title--secondary.text-align-center = checklist.description
+      .spacer--big
         - checklist.items.each do |item|
           .checklist.js-toggle-check class=(item.items ? 'js-group-master' : '') data-group=item.title.parameterize
             .checklist__content
@@ -46,4 +49,4 @@
 .progress
   .progress__bar
     span.js-status-percentage
-  .progress__status.js-status-text 0%
+  .progress__status.js-status-text 0/0

@@ -3,4 +3,15 @@
 
 .title
   font-weight: 600
-  font-size: 1.4em
+  font-size: 1.1em
+
+  +bp(md)
+    font-size: 1.4em
+
+.title--secondary
+  font-weight: 200
+  font-size: 1.1em
+
+  .title + &
+    margin-top: .8em
+

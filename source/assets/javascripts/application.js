@@ -22,8 +22,6 @@ $(document).ready(function(){
   })
 })
 
-var currentChecklist = '';
-
 function setChecklist(checklist) {
   var currentChecklist = checklist.attr('data-checklist');
   $('.js-main-instruction').text('Pronto! Carregando checklist...');
@@ -62,9 +60,10 @@ function updateProgress() {
   var currentChecklist = $('body').attr('current-checklist'),
     total = $('.'+currentChecklist).find('.js-toggle-check').length,
     checked = $('.'+currentChecklist).find('.js-toggle-check.checked').length,
-    percentage = parseInt(checked / total * 100)+'%'
+    percentage = parseInt(checked / total * 100)+'%',
+    text = checked+' / '+total
   $('.js-status-percentage').width(percentage)
-  $('.js-status-text').text(percentage)
+  $('.js-status-text').text(text)
   setActiveItem($('.'+currentChecklist))
   if (percentage >= 100) {
     finishChecklist();

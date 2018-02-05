@@ -1,5 +1,4 @@
 - title: Vou voar amanhã
-  subtitle: Vou voar amanhã
   description: Se prepare com antecedência para um vôo.
   items:
     - title: Condições de vôo
@@ -16,19 +15,16 @@
     - title: Formatar Cartão SD
     - title: Obter permissões de vôo necessárias
 - title: Estou indo pro local de vôo
-  subtitle: Indo pro local de vôo
   description: Não deixe nada para trás.
   items:
     - title: Teste 2
       paragraph: Teste 2
 - title: Vou voar agora!
-  subtitle: Vou voar agora!
   description: Tudo que você precisa fazer antes de tirar seu drone do chão.
   items:
     - title: Teste 3
       paragraph: Teste 3
 - title: Acabei de pousar
-  subtitle: Acabei de pousar
   description: Recolha seu equipamento com segurança e organização.
   items:
     - title: Teste 4
