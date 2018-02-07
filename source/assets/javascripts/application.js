@@ -20,6 +20,16 @@ $(document).ready(function(){
   $('.js-toggle-check').click(function(){
     toggleChecklistItem($(this));
   })
+
+  $('.js-toggle-modal').click(function(){
+    toggleModal();
+  })
+
+  $(document).keypress(function(e) {
+    if(e.charCode == 13) {
+      completeActiveItem();
+    }
+  });
 })
 
 function setChecklist(checklist) {
@@ -60,11 +70,11 @@ function updateProgress() {
   var currentChecklist = $('body').attr('current-checklist'),
     total = $('.'+currentChecklist).find('.js-toggle-check').length,
     checked = $('.'+currentChecklist).find('.js-toggle-check.checked').length,
-    percentage = parseInt(checked / total * 100)+'%',
+    percentage = parseInt(checked / total * 100),
     text = checked+' / '+total
-  $('.js-status-percentage').width(percentage)
-  $('.js-status-text').text(text)
   setActiveItem($('.'+currentChecklist))
+  $('.js-status-percentage').width(percentage+'%')
+  $('.js-status-text').text(text)
   if (percentage >= 100) {
     finishChecklist();
   }
@@ -79,8 +89,12 @@ function setActiveItem(container) {
   }
 }
 
+function completeActiveItem() {
+  $('.js-toggle-check.active').click();
+}
+
 function finishChecklist() {
-  // alert('Checklist finished!');
+  toggleModal();
 }
 
 function scrollToElement(element) {
@@ -92,4 +106,13 @@ function scrollToElement(element) {
     scrollIt = elementTop - ((viewportHeight - elementHeight) / 2);
 
   $("html, body").animate({scrollTop: scrollIt}, 200);
+}
+
+// Modal
+function toggleModal() {
+  var allAds = $('.js-ad'),
+    random = Math.floor(Math.random()*allAds.length);
+  allAds.hide();
+  allAds.eq(random).show();
+  $('body').toggleClass('modal-is-visible');
 }

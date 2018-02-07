@@ -2,6 +2,20 @@
   = link_to '/', class: 'header__logo' do
     = image_tag 'droneiro-com.svg'
 
+.modal
+  .modal__background.js-toggle-modal
+  .modal__content.text-align-center
+    .modal__box
+      .title Checklist Concluído
+      .title.title--secondary Tenha um bom vôo!
+    - data.ads.each do |ad|
+      .modal__box.modal__box--ad.js-ad
+        .title = ad.title
+        .title.title--secondary = ad.paragraph
+        .spacer--small
+        = link_to ad.cta.text, ad.cta.link, class: 'btn', target: '_new'
+  = image_tag 'close-icon.svg', class: 'modal__close js-toggle-modal'
+
 .section
 .spacer
 
@@ -12,12 +26,11 @@
       - data.checklists.each do |checklist|
         .checklist.checklist--main.js-checklist-option data-checklist=checklist.title.parameterize
           .checklist__content
-            .checklist__icon
+            = image_tag 'icons/'+checklist.title.parameterize+'.png', class: 'checklist__icon'
             .checklist__info
               .checklist__title = checklist.title
-              .checklist__paragraph
-                = checklist.description
-                span.checklist__detail = ' － '+checklist.items.length.to_s+' itens'
+              .checklist__paragraph = checklist.description
+              .checklist__detail = ' － '+checklist.items.length.to_s+' itens'
             .loader
 
 - data.checklists.each do |checklist|
@@ -29,7 +42,7 @@
         - checklist.items.each do |item|
           .checklist.js-toggle-check class=(item.items ? 'js-group-master' : '') data-group=item.title.parameterize
             .checklist__content
-              .checklist__icon
+              = image_tag 'icons/'+item.title.parameterize+'.png', class: 'checklist__icon'
               .checklist__info
                 .checklist__title = item.title
                 - if item.paragraph
@@ -40,7 +53,7 @@
               - item.items.each do |subitem|
                 .checklist.checklist--small.js-toggle-check.js-group data-group=item.title.parameterize
                   .checklist__content
-                    .checklist__icon
+                    = image_tag 'icons/'+subitem.title.parameterize+'.png', class: 'checklist__icon'
                     .checklist__info
                       .checklist__title = subitem.title
                       - if subitem.paragraph

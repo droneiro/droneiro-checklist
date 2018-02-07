@@ -14,18 +14,58 @@
         - title: Smartphone
     - title: Formatar Cartão SD
     - title: Obter permissões de vôo necessárias
+
 - title: Estou indo pro local de vôo
   description: Não deixe nada para trás.
   items:
-    - title: Teste 2
-      paragraph: Teste 2
+    - title: Drone
+      paragraph: Confira se o mesmo está com a proteção do gimbal devidamente acoplada.
+    - title: Rádio-controle
+      paragraph: Com carga suficiente para os vôos.
+    - title: Baterias
+      paragraph: Com carga suficiente para os vôos.
+    - title: Smartphone
+      paragraph: Com carga e espaço para eventual download das imagens do drone.
+    - title: Cartão SD
+      paragraph: Com espaço para novas imagens.
+    - title: Hélices
+    - title: Cabo para conectar Smartphone ao Rádio-controle
+    - title: Protetor de hélices
+      paragraph: Opcional
+
 - title: Vou voar agora!
   description: Tudo que você precisa fazer antes de tirar seu drone do chão.
   items:
-    - title: Teste 3
-      paragraph: Teste 3
-- title: Acabei de pousar
-  description: Recolha seu equipamento com segurança e organização.
-  items:
-    - title: Teste 4
-      paragraph: Teste 4
+    - title: Condições de Vôo
+      paragraph: O equipamento que vou utilizar tem capacidade de voar nas condições climáticas atuais.
+    - title: Hélices
+      paragraph: As hélices estão íntegras e nenhum objeto está bloqueando seus movimentos. <b>Ao menor sinal de desgaste, faça a substituição</b>.
+    - title: Encaixe da Bateria
+      paragraph: A bateria não se soltará com os movimentos da aeronave durante o vôo.
+    - title: Protetor do Gimbal
+      paragraph: O protetor do Gimbal foi devidamente removido.
+    - title: Cartão SD
+      paragraph: O Cartão SD se encontra na aeronave.
+    - title: Avise os desavisados
+      paragraph: Já expliquei à todos que estão próximos sobre o tipo de operação que irei realizar e os instrui a não se aproximar da aeronave sobretudo nos procedimentos de decolagem e pouso.
+    - title: Cuidado com os animais
+      paragraph: Não há animais que podem reagir de forma inesperada à decolagem do drone no local.
+    - title: Ligue o Drone
+    - title: Ligue o Rádio-controle
+      paragraph: Posicione as antenas corretamente.
+    - title: Calibragem do Compass e IMU
+      paragraph: Todos os sensores da aeronave estão devidamente calibrados. Caso o sistema acuse qualquer erro, Faça a recalibragem.
+    - title: Modo de Vôo
+      paragraph: O modo de vôo escolhido está adequado ao local de vôo.
+    - title: Configuração de Home-Point
+      paragraph: O Home-Point está devidamente configurado no local desejado e com a altura maior do que o obstáculo mais alto ao redor.
+    - title: Decole o Drone
+      paragraph: Sobrevoe à 5 metros de altura por 15 segundos para monitorar o comportamento e som da aeronave.
+    - title: Controlabilidade
+      paragraph: A aeronave está respondendo a todos os comandos do controle.
+
+# - title: Acabei de pousar
+#   description: Recolha seu equipamento com segurança e organização.
+#   items:
+#     - title: Teste 4
+#       paragraph: Teste 4

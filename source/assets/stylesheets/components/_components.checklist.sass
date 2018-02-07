@@ -36,7 +36,6 @@
 
   &.checked
     opacity: .3
-    filter: grayscale(100%)
 
 .checklist__content
   padding: 1em
@@ -67,17 +66,19 @@
 .checklist__icon
   width: 3em
   height: 3em
-  background-color: $color-magenta
   border-radius: 50%
   flex-shrink: 0
+  margin-right: 1.2em
 
   .checklist--main &
     width: 4em
     height: 4em
 
+  .checklist__group &
+    font-size: .8em
+
 .checklist__info
   flex-grow: 1
-  margin-left: 1.4em
 
 .checklist__title
   font-size: 1.2em
@@ -87,15 +88,13 @@
   font-size: .8em
   color: rgba(black, .5)
   margin-top: .3em
-  font-weight: 200
   line-height: 1.4
 
-  +bp(md-only)
-    font-weight: 400
-
 .checklist__detail
-  font-size: .8em
+  font-size: .6em
+  margin-top: .8em
   font-weight: 400
+  color: rgba(black, .7)
 
 .checklist__group
   margin-left: 1em
