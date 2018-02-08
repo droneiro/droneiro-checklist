@@ -1,6 +1,4 @@
-.header
-  = link_to '/', class: 'header__logo' do
-    = image_tag 'droneiro-com.svg'
+
 
 .modal
   .modal__background.js-toggle-modal
@@ -16,50 +14,56 @@
         = link_to ad.cta.text, ad.cta.link, class: 'btn', target: '_new'
   = image_tag 'close-icon.svg', class: 'modal__close js-toggle-modal'
 
-.section
-.spacer
+.header
+  = link_to '/', class: 'header__logo' do
+    = image_tag 'droneiro-com.svg'
 
-.section.checklist__options
-  .container
-    .title.text-align-center.js-main-instruction Escolha um checklist para começar!
-    .spacer
-      - data.checklists.each do |checklist|
-        .checklist.checklist--main.js-checklist-option data-checklist=checklist.title.parameterize
-          .checklist__content
-            = image_tag 'icons/'+checklist.title.parameterize+'.png', class: 'checklist__icon'
-            .checklist__info
-              .checklist__title = checklist.title
-              .checklist__paragraph = checklist.description
-              .checklist__detail = ' － '+checklist.items.length.to_s+' itens'
-            .loader
+.app.js-app
+  .header
+    = link_to '/', class: 'header__logo' do
+      = image_tag 'droneiro-com.svg'
 
-- data.checklists.each do |checklist|
-  .section.section--checklist.checklist__container class=checklist.title.parameterize
+  .section.section--big.checklist__options
     .container
-      .title.text-align-center = checklist.title
-      .title.title--secondary.text-align-center = checklist.description
-      .spacer--big
-        - checklist.items.each do |item|
-          .checklist.js-toggle-check class=(item.items ? 'js-group-master' : '') data-group=item.title.parameterize
+      .title.text-align-center.js-main-instruction Escolha um checklist para começar!
+      .spacer
+        - data.checklists.each do |checklist|
+          .checklist.checklist--main.js-checklist-option data-checklist=checklist.title.parameterize
             .checklist__content
-              = image_tag 'icons/'+item.title.parameterize+'.png', class: 'checklist__icon'
+              = image_tag 'icons/'+checklist.title.parameterize+'.png', class: 'checklist__icon'
               .checklist__info
-                .checklist__title = item.title
-                - if item.paragraph
-                  .checklist__paragraph = item.paragraph
+                .checklist__title = checklist.title
+                .checklist__paragraph = checklist.description
+                .checklist__detail = ' － '+checklist.items.length.to_s+' itens'
+              .loader
 
-          - if item.items
-            .checklist__group
-              - item.items.each do |subitem|
-                .checklist.checklist--small.js-toggle-check.js-group data-group=item.title.parameterize
-                  .checklist__content
-                    = image_tag 'icons/'+subitem.title.parameterize+'.png', class: 'checklist__icon'
-                    .checklist__info
-                      .checklist__title = subitem.title
-                      - if subitem.paragraph
-                        .checklist__paragraph = subitem.paragraph
+  - data.checklists.each do |checklist|
+    .section.section--checklist.checklist__container class=checklist.title.parameterize
+      .container
+        .title.text-align-center = checklist.title
+        .title.title--secondary.text-align-center = checklist.description
+        .spacer--big
+          - checklist.items.each do |item|
+            .checklist.js-toggle-check class=(item.items ? 'js-group-master' : '') data-group=item.title.parameterize
+              .checklist__content
+                = image_tag 'icons/'+item.title.parameterize+'.png', class: 'checklist__icon'
+                .checklist__info
+                  .checklist__title = item.title
+                  - if item.paragraph
+                    .checklist__paragraph = item.paragraph
 
-.progress
-  .progress__bar
-    span.js-status-percentage
-  .progress__status.js-status-text 0/0
+            - if item.items
+              .checklist__group
+                - item.items.each do |subitem|
+                  .checklist.checklist--small.js-toggle-check.js-group data-group=item.title.parameterize
+                    .checklist__content
+                      = image_tag 'icons/'+subitem.title.parameterize+'.png', class: 'checklist__icon'
+                      .checklist__info
+                        .checklist__title = subitem.title
+                        - if subitem.paragraph
+                          .checklist__paragraph = subitem.paragraph
+
+  .progress
+    .progress__bar
+      span.js-status-percentage
+    .progress__status.js-status-text 0/0
