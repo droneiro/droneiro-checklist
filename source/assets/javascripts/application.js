@@ -30,6 +30,15 @@ $(document).ready(function(){
       completeActiveItem();
     }
   });
+
+  var addtohome = addToHomescreen({
+    skipFirstVisit: false,
+    message: "Para adicionar esse app no seu dispositivo, toque aqui e adicione à sua tela de início.",
+    lifespan: 0,
+    maxDisplayCount: 0,
+    modal: true,
+    mandatory: true
+  });
 })
 
 function setChecklist(checklist) {
