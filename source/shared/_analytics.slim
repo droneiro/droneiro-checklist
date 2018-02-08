@@ -1,8 +1,8 @@
-- if build? && @google_analytics.present?
-  script async=true src="https://www.googletagmanager.com/gtag/js?id=#{@google_analytics}"
+- if build? && data.global.ga_code
+  script async=true src="https://www.googletagmanager.com/gtag/js?id=#{data.global.ga_code}"
   javascript:
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', @google_analytics);
+    gtag('config', "#{data.global.ga_code}");

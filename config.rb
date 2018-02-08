@@ -1,10 +1,6 @@
 # View Middleman configurations:
 # http://localhost:4567/__middleman/config/
 
-# Site Settings
-# ----------------------------------------------
-@google_analytics = "UA-72298904-9"
-
 # Slim HTML
 # ----------------------------------------------
 ::Slim::Engine.set_options :format  => :html
