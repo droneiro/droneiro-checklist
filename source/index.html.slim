@@ -40,8 +40,8 @@
   - data.checklists.each do |checklist|
     .section.section--checklist.checklist__container class=checklist.title.parameterize
       .container
-        .title.text-align-center = checklist.title
-        .title.title--secondary.text-align-center = checklist.description
+        .title.text-align-center Toque nos itens que já foram feitos
+        .title.title--secondary.text-align-center
         .spacer--big
           - checklist.items.each do |item|
             .checklist.js-toggle-check class=(item.items ? 'js-group-master' : '') data-group=item.title.parameterize

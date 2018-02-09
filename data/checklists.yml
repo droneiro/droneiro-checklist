@@ -53,7 +53,7 @@
     - title: Ligue o Drone
     - title: Ligue o Rádio-controle
       paragraph: Posicione as antenas corretamente.
-    - title: Calibragem do Compass e IMU
+    - title: Calibragem do Compass
       paragraph: Todos os sensores da aeronave estão devidamente calibrados. Caso o sistema acuse qualquer erro, Faça a recalibragem.
     - title: Modo de Vôo
       paragraph: O modo de vôo escolhido está adequado ao local de vôo.
