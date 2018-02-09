@@ -1,20 +1,18 @@
-/ meta name='description' content="#{page_description}"
-/ meta property='og:url' content="#{current_page_url}"
-/ meta property='og:title' content="#{page_title}"
-/ meta name='twitter:title' content="#{page_title}"
-/ - if data.page.thumb
-/   meta property='og:image' content="#{site_url}/#{data.page.thumb}"
-/   meta name='twitter:image:src' content="#{site_url}/#{data.page.thumb}"
-/ - else
-/   meta property='og:image' content="#{site_url}#{image_path('og-image.png')}"
-/   meta name='twitter:image:src' content="#{site_url}#{image_path('og-image.png')}"
-/ meta property='og:description' content="#{page_description}"
+meta property='og:url' content="#{data.global.site_url}#{current_page.url}"
+meta property='og:title' content=data.global.site_name
+meta name='twitter:title' content=data.global.site_name
+meta property='og:description' content=data.global.site_description
+meta name='description' content=data.global.site_description
+meta property='og:image' content="#{data.global.site_url}#{image_path('og-image.png')}"
+meta property='og:image:width' content="1200"
+meta property='og:image:height' content="630"
+meta name='twitter:image:src' content="#{data.global.site_url}#{image_path('og-image.png')}"
 / meta name='twitter:site' content="#{site_twitter}"
 / meta name='twitter:creator' content="#{site_name}"
 / meta property='article:author ' content="#{site_name}"
-/ meta property='og:site_name' content="#{site_name}"
-/ meta name='twitter:card' content='summary_large_image'
-
+meta property='og:site_name' content="#{data.global.site_name}"
+meta name='twitter:card' content='summary_large_image'
+meta property='og:type' content="website"
 
 / Icon
 link rel='shortcut icon' href=image_path('webapp-icons/favicon.ico?v=6')
