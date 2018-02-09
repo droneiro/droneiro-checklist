@@ -15,12 +15,18 @@
   = image_tag 'close-icon.svg', class: 'modal__close js-toggle-modal'
 
 .header
-  = link_to '/', class: 'header__logo' do
+  = link_to '/', class: 'header__back no-line-height' do
+    = image_tag 'back-icon.svg'
+
+  = link_to '/', class: 'header__logo no-line-height' do
     = image_tag 'droneiro-com.svg'
+
+  span
+
 
 .app.js-app
   .header
-    = link_to '/', class: 'header__logo' do
+    = link_to '/', class: 'header__logo no-line-height' do
       = image_tag 'droneiro-com.svg'
 
   .section.section--big.checklist__options

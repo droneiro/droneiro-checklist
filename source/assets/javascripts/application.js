@@ -35,8 +35,7 @@ $(document).ready(function(){
     skipFirstVisit: false,
     lifespan: 0,
     maxDisplayCount: 0,
-    modal: true,
-    mandatory: true
+    modal: true
   });
 })
 

@@ -2,20 +2,44 @@
 /// @name header
 
 .header
-  padding: 1.2em 0
+  padding: 1.2em
   border-bottom: 1px solid rgba(white, .1)
   background-color: rgba($color-purple, .95)
   position: fixed
   width: 100%
   text-align: center
   z-index: 1
+  display: flex
+  box-sizing: border-box
+  justify-content: space-between
 
   .app &
     position: relative
     visibility: hidden
+
+  > *
+    align-self: center
 
 .header__logo
   display: inline-block
 
   img
     height: 1.6em
+
+.header__back
+  height: 80%
+
+  opacity: 0
+  visibility: hidden
+  transform: translateX(1em)
+  transition: .4s cubic-bezier(.38,1.62,.61,1)
+
+  body[current-checklist] &
+    opacity: 1
+    visibility: visible
+    transform: translateX(0em)
+
+  img
+    height: 1.6em
+
+
