@@ -56,5 +56,5 @@ configure :build do
   activate :directory_indexes
 
   # Add asset fingerprinting to avoid cache issues
-  activate :asset_hash
+  activate :asset_hash, :ignore => %r{^assets/images/webapp-icons/.*}
 end
