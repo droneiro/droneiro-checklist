@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.4.0'
 
 # HTTP server for Ruby/Rack recommended by Heroku
 gem 'puma', '~> 3.11'
