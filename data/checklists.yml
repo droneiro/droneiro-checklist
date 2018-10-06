@@ -53,12 +53,12 @@
     - title: Ligue o Drone
     - title: Ligue o Rádio-controle
       paragraph: Posicione as antenas corretamente.
-    - title: Calibragem do Compass
+    - title: Calibragem dos Sensores
       paragraph: Todos os sensores da aeronave estão devidamente calibrados. Caso o sistema acuse qualquer erro, Faça a recalibragem.
     - title: Modo de Vôo
       paragraph: O modo de vôo escolhido está adequado ao local de vôo.
     - title: Configuração de Home-Point
-      paragraph: O Home-Point está devidamente configurado no local desejado e com a altura maior do que o obstáculo mais alto ao redor.
+      paragraph: O Home-Point está devidamente configurado no local desejado e com a altura de retorno maior do que o obstáculo mais alto ao redor.
     - title: Decole o Drone
       paragraph: Sobrevoe à 5 metros de altura por 15 segundos para monitorar o comportamento e som da aeronave.
     - title: Controlabilidade
